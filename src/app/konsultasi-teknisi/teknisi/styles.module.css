@@ -1,0 +1,10 @@
+.containerListType {
+  display: grid;
+  grid-template-columns: repeat(6, 158px);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.containerListType > div:nth-child() {
+  background-color: #c3e9ff;
+}
