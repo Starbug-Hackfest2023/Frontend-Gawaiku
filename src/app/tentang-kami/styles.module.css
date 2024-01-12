@@ -1,0 +1,11 @@
+.container {
+  background-image: url('../../components/assets/bg-hero.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 306px;
+  padding-bottom: 82px;
+  padding-left: 201px;
+  padding-right: 201px;
+  color: white;
+}
