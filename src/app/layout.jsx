@@ -2,16 +2,15 @@ import Navbar from '@/components/Layout/Navbar';
 import { Box } from '@mui/material';
 import Footer from '@/components/Layout/Footer';
 import ThemeRegistry from '@/components/Theme/ThemeRegistry';
-
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import './globals.css';
 
 export const metadata = {
-  icons:[
-    {
-      icon:'/favicon.ico'
-    }
-  ],
+  // icons:[
+  //   {
+  //     icon:'/favicon.ico'
+  //   }
+  // ],
   title: 'Gawaiku',
   description: 'Gawaiku menyediakan jasa servis profesional untuk memperbaiki dan merawat peralatan Anda. Layanan kami mencakup servis elektronik, perbaikan perangkat rumah tangga, dan banyak lagi.',
 };

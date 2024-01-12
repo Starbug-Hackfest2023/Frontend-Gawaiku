@@ -174,7 +174,7 @@ function RecomendationStore({ data }) {
             <Card component='div' sx={{ width: '22.4%', overflow: 'hidden', borderRadius: '12px' }} variant='outlined' key={idx}>
               <MuiLink component={Link} href={'https://www.tokopedia.com/sepatucompass/compass-velocity-black-36?source=homepage.left_carousel.0.293672'}>
                 <Box width='100%' height='180px' position='relative'>
-                  <Image src={StoreImg} fill />
+                  <Image src={StoreImg} fill alt='image-store' />
                 </Box>
               </MuiLink>
               <CardContent component='div' sx={{ display: 'flex', flexDirection: 'column', aligndatas: 'center' }}>
