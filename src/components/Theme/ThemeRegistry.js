@@ -5,7 +5,7 @@ import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import React from 'react';
-import { theme } from './theme';
+import { theme } from './Theme';
 
 export default function ThemeRegistry({ children }) {
   const options = { key: 'mui' };
