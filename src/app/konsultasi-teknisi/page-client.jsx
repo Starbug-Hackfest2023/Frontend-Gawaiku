@@ -176,7 +176,7 @@ function TeknisiClient() {
       <Paper component='section' sx={{ ...paperStyle, mt: '266px' }}>
         <Box marginBottom='74px'>
           <Typography textTransform='uppercase' variant='h4' textAlign='center' fontWeight='700' color='#172675'>
-            Cari jenis elektronik atau gadget kamu disini, ya!
+            konsultasi dengan teknisi di gawaiku
           </Typography>
           <Typography variant='h5' textAlign='center' maxWidth='734px' marginX='auto' fontWeight='600' color='#34ADF2'>
             Layanan Konsultasi yang siap membantu memberikan jawaban atas masalah Elektronik maupun gadget anda!
@@ -220,7 +220,7 @@ function TeknisiClient() {
 
       <Paper component='section' sx={{ ...paperStyle, mt: '68px', mx: 'auto', mb: '101px' }}>
         <Typography textTransform='uppercase' variant='h4' maxWidth='654px' fontWeight='700' color='#172675'>
-          konsultasi dengan teknisi di gawaiku
+          Cari jenis elektronik atau gadget kamu disini, ya!
         </Typography>
         <Typography variant='h6' fontWeight='400' marginBottom='58px' color='#172675'>
           Pilih jenis elektronik atau gadgetmu

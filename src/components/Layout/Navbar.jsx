@@ -1,15 +1,16 @@
 'use client';
 
-import { Box, Button, Link as MuiLink, AppBar, Toolbar, IconButton } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
-import LoginModal from '../LoginModal';
-import Link from 'next/link';
+import { AppBar, Box, Button, IconButton, Link as MuiLink, Toolbar, Typography } from '@mui/material';
 import Image from 'next/image';
-import Logo from '../assets/logo-gawaiku.png';
+import Link from 'next/link';
 import { useState } from 'react';
+import Logo from '../assets/logo-gawaiku.png';
+import LoginModal from '../LoginModal';
 
-function Navbar() {
-  const auth = false;
+function Navbar({ isAuth, dataUser }) {
+  const auth = isAuth;
+  const data = dataUser;
 
   const [modalOpen, setModalOpen] = useState(false);
   const handleOpen = () => setModalOpen(true);
@@ -44,14 +45,15 @@ function Navbar() {
           <Box display='flex' alignItems='center' gap='21px'>
             {navContent.map((nav, idx) => {
               return (
-                <MuiLink component={Link} href={nav.path} underline='none' key={idx} color='black' paddingX='16px' textTransform='uppercase' >
+                <MuiLink component={Link} href={nav.path} underline='none' key={idx} color='black' paddingX='16px' textTransform='uppercase'>
                   {nav.title}
                 </MuiLink>
               );
             })}
             {auth ? (
-              <IconButton size='large' aria-label='account of current user' aria-controls='menu-appbar' aria-haspopup='true' color='inherit'>
-                <AccountCircle />
+              <IconButton LinkComponent={Link} href='/user/settings' size='large' aria-label='account of current user' aria-controls='menu-appbar' aria-haspopup='true' color='inherit' sx={{ borderRadius: 16, gap: 2 }}>
+                <AccountCircle fontSize='large' />
+                <Typography variant='h5'>{data?.username || '-'}</Typography>
               </IconButton>
             ) : (
               <Button variant='contained' onClick={handleOpen}>
