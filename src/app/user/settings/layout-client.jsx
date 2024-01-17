@@ -3,6 +3,7 @@
 import { Box, Button, Paper, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { logoutUsers } from '@/app/actions/auth';
 
 function LayoutClient({ children }) {
   const pathname = usePathname();
@@ -52,6 +53,7 @@ function LayoutClient({ children }) {
                 </Button>
               );
             })}
+            <Button onClick={async () => await logoutUsers()}>Logout</Button>
           </Stack>
         </Paper>
         {children}

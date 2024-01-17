@@ -1,6 +1,5 @@
 'use server';
 
-import { getCookie } from 'cookies-next';
 import { cookies } from 'next/headers';
 
 const getCookieClient = () => {
@@ -9,3 +8,4 @@ const getCookieClient = () => {
 };
 
 export { getCookieClient };
+
