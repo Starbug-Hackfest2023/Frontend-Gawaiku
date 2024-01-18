@@ -15,36 +15,42 @@ function HomeClient() {
     {
       img: LaptopImg,
       text: 'Laptop',
+      keahlian: 'laptop',
       alt: 'laptop-image',
       path: '/tanya-teknisi',
     },
     {
       img: PcImg,
       text: 'PC',
+      keahlian: 'pc',
       alt: 'PC-image',
       path: '/spare-part',
     },
     {
       img: HpImg,
       text: 'Handphone',
+      keahlian: 'handphone',
       alt: 'HP-image',
       path: '/antar-jemput',
     },
     {
       img: CameraImg,
       text: 'Kamera',
+      keahlian: 'kamera',
       alt: 'Camera-image',
       path: '/antar-jemput',
     },
     {
       img: CameraImg,
       text: 'Kamera',
+      keahlian: 'kamera',
       alt: 'Camera-image',
       path: '/antar-jemput',
     },
     {
       img: CameraImg,
       text: 'Kamera',
+      keahlian: 'kamera',
       alt: 'Camera-image',
       path: '/antar-jemput',
     },
@@ -143,7 +149,17 @@ function HomeClient() {
         <Box display='flex' gap='20px'>
           {contentCard.map((category, idx) => {
             return (
-              <Paper variant='elevation' elevation={3} sx={paperStyle} key={idx}>
+              <Paper
+                component={Link}
+                href={{
+                  pathname: '/konsultasi-teknisi/teknisi',
+                  query: { keahlian: category.keahlian },
+                }}
+                variant='elevation'
+                elevation={3}
+                sx={paperStyle}
+                key={idx}
+              >
                 <Box width='100%' height='60px'>
                   <Image src={category.img} width='auto' height='auto' alt={category.alt} />
                 </Box>
